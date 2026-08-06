@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundito - Track Your Funds</title>
+    <link rel="icon" type="image/png" href="fundlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0fdf7 0%, #ecfdf5 50%, #f0fdf4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 56px 40px;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 20px 50px -12px rgba(15,110,86,0.12);
+        }
+        .logo {
+            width: 88px;
+            height: 88px;
+            border-radius: 22px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0F6E56;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+        .tagline {
+            font-size: 15px;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .links a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            color: #1f2937;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .links a:hover {
+            border-color: #0F6E56;
+            background: #f0fdf7;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(15, 110, 86, 0.1);
+        }
+        .links a .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .links a .icon.privacy { background: #ecfdf5; }
+        .links a .icon.terms { background: #eff6ff; }
+        .links a .icon svg { width: 20px; height: 20px; }
+        .links a .text { text-align: left; }
+        .links a .text span {
+            display: block;
+            font-size: 12px;
+            color: #9ca3af;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+        footer {
+            margin-top: 32px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+        @media (max-width: 480px) {
+            .card { padding: 40px 24px; border-radius: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="fundlogo.png" alt="Fundito Logo" class="logo">
+        <h1>Fundito</h1>
+        <p class="tagline">Track your funds here.</p>
+
+        <div class="links">
+            <a href="privacy-policy.html">
+                <div class="icon privacy">
+                    <svg fill="none" stroke="#0F6E56" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <div class="text">
+                    Privacy Policy
+                    <span>How we handle your data</span>
+                </div>
+            </a>
+            <a href="terms-of-service.html">
+                <div class="icon terms">
+                    <svg fill="none" stroke="#3b82f6" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                </div>
+                <div class="text">
+                    Terms of Service
+                    <span>Rules for using Fundito</span>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Fundito. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
