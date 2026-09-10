@@ -109,12 +109,12 @@
             <img src="fundlogo.png" alt="Fundito">
             <div class="title">
                 <h1>Privacy Policy</h1>
-                <p>Last updated: August 5, 2025</p>
+                <p>Last updated: September 10, 2026</p>
             </div>
         </header>
 
         <h2>1. Introduction</h2>
-        <p>Welcome to Fundito ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <p>Welcome to Fundito ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains what we collect, how we use it, who we share it with, and the choices you have when you use our mobile application.</p>
 
         <h2>2. Information We Collect</h2>
 
@@ -123,81 +123,148 @@
         <ul>
             <li>Your name</li>
             <li>Email address</li>
+            <li>A profile photo, only if you choose to upload one</li>
         </ul>
 
         <h3>2.2 Financial Data You Provide</h3>
         <p>Fundito is an expense tracking app. The financial data you enter is stored securely:</p>
         <ul>
-            <li>Expense amounts and categories</li>
-            <li>Wallet names and balances</li>
+            <li>Expense amounts, titles, categories and dates</li>
+            <li>Wallet names, types and balances</li>
+            <li>Budget limits you set</li>
+            <li>Scheduled and recurring expenses</li>
             <li>Currency preferences</li>
             <li>Notes and descriptions you add to transactions</li>
         </ul>
 
-        <h3>2.3 Device and Usage Information</h3>
+        <h3>2.3 AI Assistant Conversations</h3>
+        <p>If you use the AI Chat feature (a premium feature), we process the messages you send to the assistant together with a summary of your spending in order to generate a reply. Section 4 explains exactly what is sent and to whom.</p>
+
+        <h3>2.4 Device and Usage Information</h3>
         <ul>
             <li>Device type and operating system version</li>
-            <li>App usage patterns (e.g., features used)</li>
-            <li>Crash logs and performance data</li>
+            <li>App usage patterns (e.g. screens viewed, and features used such as adding an expense, creating a wallet, setting a budget, exporting a report, or starting a subscription)</li>
+            <li>Crash logs, stack traces and performance data</li>
+            <li>An analytics identifier associated with your account, used to link this activity to your app installation</li>
+        </ul>
+        <p>This information is collected through Google Firebase Analytics and Firebase Crashlytics. See Section 6.</p>
+
+        <h3>2.5 What We Do Not Collect</h3>
+        <ul>
+            <li>We do not collect your bank credentials, card numbers, or any payment card details. Fundito never connects to your bank — every figure in the app is one you entered yourself.</li>
+            <li>We do not process your subscription payment ourselves. Payments are handled by Google Play; we only receive your subscription status.</li>
+            <li>We do not collect your location.</li>
+            <li>We do not collect contacts, SMS messages, or your photo library. Camera and photo permissions are used only for the single image you pick when setting a profile photo.</li>
         </ul>
 
         <h2>3. How We Use Your Information</h2>
         <p>We use the information we collect to:</p>
         <ul>
             <li>Provide and maintain the Fundito app</li>
-            <li>Sync your data across devices</li>
-            <li>Send you scheduled notifications and reminders (with your permission)</li>
+            <li>Sync your data across devices and keep it available offline</li>
+            <li>Generate spending insights, statistics and your Year in Review</li>
+            <li>Answer your questions through the AI Chat feature</li>
+            <li>Show reminders and notifications you have opted into</li>
             <li>Improve app performance and fix bugs</li>
-            <li>Process in-app purchases and subscriptions</li>
+            <li>Determine your subscription status and unlock premium features</li>
             <li>Respond to support requests</li>
         </ul>
+        <p>We do not use your financial data for advertising, and we do not build advertising profiles about you.</p>
 
-        <h2>4. Data Storage and Security</h2>
-        <p>Your data is stored securely using Supabase, which provides enterprise-grade security with encryption at rest and in transit. We implement appropriate technical measures to protect your personal information against unauthorized access, alteration, or destruction.</p>
+        <h2>4. AI Assistant and Third-Party AI Processing</h2>
+        <p>Fundito's premium AI Chat feature is powered by a third-party AI provider, <strong>Groq, Inc.</strong>, which operates servers in the United States. This means that when you send a message to the AI assistant, some of your data leaves our systems and is processed by that provider.</p>
 
-        <h2>5. Third-Party Services</h2>
-        <p>Fundito uses the following third-party services:</p>
+        <h3>4.1 What is sent</h3>
+        <p>Each time you send a message to the AI assistant, we transmit:</p>
         <ul>
-            <li><strong>Supabase</strong> — Authentication and database hosting</li>
+            <li>The message you typed, and up to the last six messages of the current conversation, for continuity</li>
+            <li>Your monthly spending totals for up to the last 13 months</li>
+            <li>Your totals for up to your 10 largest spending categories</li>
+            <li>Your total number of logged transactions</li>
+            <li>Your most recent transactions — up to five, including their title, amount, category and date</li>
+            <li>Your wallet names, types and balances</li>
+            <li>Your currency setting and the current date</li>
+        </ul>
+
+        <h3>4.2 What is not sent</h3>
+        <p>We do <strong>not</strong> send your name, email address, profile photo, or account identifier to the AI provider. The provider receives your financial summary and your messages without the account details that identify you to us.</p>
+
+        <h3>4.3 Your control over this</h3>
+        <ul>
+            <li>This processing happens only when you actively use the AI Chat feature. If you never open AI Chat, none of your data is ever sent to the AI provider.</li>
+            <li>Avoid typing sensitive personal information into the chat, since anything you type is transmitted as part of your message.</li>
+            <li>Conversations are held in the app for the duration of your session and are not stored on our servers as a permanent chat history.</li>
+        </ul>
+
+        <h3>4.4 Accuracy</h3>
+        <p>AI-generated responses can be incomplete or wrong. They are general information, not financial, tax, investment or legal advice. Always verify anything important before acting on it. See our <a href="terms-of-service.html">Terms of Service</a> for more.</p>
+
+        <h2>5. Data Storage and Security</h2>
+
+        <h3>5.1 On our servers</h3>
+        <p>Your data is stored using Supabase, which provides encryption at rest and in transit. Access to your records is restricted to your own account through row-level security rules. We implement appropriate technical measures to protect your personal information against unauthorized access, alteration, or destruction.</p>
+
+        <h3>5.2 On your device</h3>
+        <p>So that the app works offline and starts quickly, Fundito caches a copy of your expenses, wallets, budgets and preferences in your device's local app storage. This cache is cleared when you sign out or uninstall the app, and is protected by your device's own security.</p>
+
+        <h3>5.3 Profile photos</h3>
+        <p>If you upload a profile photo, it is stored in our Supabase storage and served over a public web address. That address is not listed or indexed anywhere, but anyone holding the exact link could open it. Please do not upload an image you would not want seen by someone with that link. You can remove your photo at any time from your profile settings.</p>
+
+        <h3>5.4 Notifications</h3>
+        <p>Budget alerts and bill reminders are generated locally on your device. We do not operate a push-notification service, and we do not collect push tokens or device advertising identifiers for this purpose.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>Fundito relies on the following third-party services, each of which may process some of your data:</p>
+        <ul>
+            <li><strong>Supabase</strong> — Authentication, database, storage and server functions</li>
             <li><strong>Google Sign-In</strong> — Authentication</li>
             <li><strong>Facebook Login</strong> — Authentication</li>
-            <li><strong>RevenueCat</strong> — Subscription and purchase management</li>
+            <li><strong>Google Play Billing</strong> — Processing of subscription payments</li>
+            <li><strong>RevenueCat</strong> — Subscription management and entitlement checks</li>
+            <li><strong>Groq, Inc.</strong> — AI processing for the premium AI Chat feature (see Section 4)</li>
+            <li><strong>Google Firebase Analytics</strong> — App usage analytics</li>
+            <li><strong>Google Firebase Crashlytics</strong> — Crash and stability reporting</li>
         </ul>
-        <p>Each of these services has their own privacy policies. We encourage you to review them.</p>
+        <p>Each of these services has its own privacy policy. We encourage you to review them.</p>
 
-        <h2>6. Data Sharing</h2>
-        <p>We do not sell, trade, or rent your personal information to third parties. We may share data only:</p>
+        <h2>7. International Data Transfers</h2>
+        <p>Some of the providers listed above, including our AI provider and our analytics providers, process data on servers outside the Philippines, including in the United States. By using Fundito you acknowledge that your information may be transferred to and processed in those countries, which may have different data protection laws than your own.</p>
+
+        <h2>8. Data Sharing</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties, and we do not share it with advertisers. We share data only:</p>
         <ul>
-            <li>With service providers who assist in operating our app (as listed above)</li>
+            <li>With the service providers listed in Section 6, and only to the extent needed to operate the app</li>
             <li>If required by law or legal process</li>
             <li>To protect our rights or the safety of our users</li>
         </ul>
 
-        <h2>7. Data Retention</h2>
-        <p>We retain your data for as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where we are required to retain it for legal purposes.</p>
+        <h2>9. Data Retention</h2>
+        <p>We retain your data for as long as your account is active. If you delete your account from Account Management in the app, we delete your personal data within 30 days, except where we are required to retain it for legal purposes. Crash and analytics records are retained according to Google's own retention schedules.</p>
 
-        <h2>8. Your Rights</h2>
+        <h2>10. Your Rights</h2>
         <p>You have the right to:</p>
         <ul>
             <li>Access the personal data we hold about you</li>
-            <li>Request correction of inaccurate data</li>
-            <li>Request deletion of your account and data</li>
-            <li>Export your financial data (CSV/PDF)</li>
-            <li>Withdraw consent for optional data processing</li>
+            <li>Request correction of inaccurate data, and edit your profile at any time in the app</li>
+            <li>Delete your account and data yourself, from Account Management in your profile settings</li>
+            <li>Export your financial data (CSV or PDF) through the Year in Review feature</li>
+            <li>Choose not to use the AI Chat feature, so that none of your data is sent to the AI provider</li>
+            <li>Withdraw consent for optional data processing, including notification permissions, through your device settings</li>
         </ul>
+        <p>To exercise any right you cannot complete inside the app, contact us at the address in Section 13.</p>
 
-        <h2>9. Children's Privacy</h2>
-        <p>Fundito is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+        <h2>11. Children's Privacy</h2>
+        <p>Fundito is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
 
-        <h2>10. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app or via email. Continued use of Fundito after changes constitutes acceptance of the updated policy.</p>
+        <h2>12. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app or via email, and we will update the "Last updated" date above. Continued use of Fundito after changes constitutes acceptance of the updated policy.</p>
 
-        <h2>11. Contact Us</h2>
+        <h2>13. Contact Us</h2>
         <p>If you have questions about this Privacy Policy or your data, please contact us at:</p>
         <p><strong>Email:</strong> fundito.supp@gmail.com</p>
 
         <footer>
-            <p>&copy; 2025 Fundito. All rights reserved.</p>
+            <p>&copy; 2026 Fundito. All rights reserved.</p>
         </footer>
     </div>
 </body>
